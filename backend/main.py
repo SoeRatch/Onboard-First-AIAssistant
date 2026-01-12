@@ -10,7 +10,8 @@ from fastapi.responses import FileResponse
 from backend.rag import RAGEngine
 from backend.routers.chat import router as chat_router
 from backend.routers.onboard import router as onboard_router
-
+from dotenv import load_dotenv
+load_dotenv()
 COMPANY_NAME = os.getenv("COMPANY_NAME")
 # Paths
 BACKEND_DIR = Path(__file__).parent

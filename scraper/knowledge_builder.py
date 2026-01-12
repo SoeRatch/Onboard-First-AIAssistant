@@ -2,7 +2,8 @@ import os
 from datetime import datetime
 from sentence_transformers import SentenceTransformer
 from sklearn.metrics.pairwise import cosine_similarity
-
+from dotenv import load_dotenv
+load_dotenv()
 COMPANY_NAME = os.getenv("COMPANY_NAME")
 
 SIMILARITY_THRESHOLD = 0.6 # similarity threshold for semantic chunking

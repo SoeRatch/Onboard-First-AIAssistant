@@ -6,6 +6,9 @@ Provides responses when OpenAI API is unavailable.
 """
 
 import os
+from dotenv import load_dotenv
+load_dotenv()
+
 COMPANY_NAME = os.getenv("COMPANY_NAME")
 
 # Canned responses for common scenarios

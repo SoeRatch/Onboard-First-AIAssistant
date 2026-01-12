@@ -1,13 +1,15 @@
 import sys
 import os
 from pathlib import Path
-from backend import rag
+
+from dotenv import load_dotenv
+load_dotenv()
+COMPANY_NAME = os.getenv("COMPANY_NAME")
 
 # Add project root to path
 project_root = Path(__file__).parent.parent
 sys.path.append(str(project_root))
 
-COMPANY_NAME = os.getenv("COMPANY_NAME")
 
 def verify_rag():
     # Setup paths

@@ -8,14 +8,13 @@ import os
 import json
 from datetime import datetime
 from pathlib import Path
-
 from fastapi import APIRouter, HTTPException
 from pydantic import BaseModel, field_validator
 
 from backend.pii import validate_email, validate_phone
 
-router = APIRouter()
-
+from dotenv import load_dotenv
+load_dotenv()
 COMPANY_NAME = os.getenv('COMPANY_NAME')
 
 # Paths
@@ -25,6 +24,7 @@ DATA_DIR = PROJECT_ROOT / "data"
 USERS_FILE = DATA_DIR / "users.json"
 CHAT_HISTORY_FILE = DATA_DIR / "chat_history.json"
 
+router = APIRouter()
 
 def ensure_data_files():
     """Ensure data files exist."""
