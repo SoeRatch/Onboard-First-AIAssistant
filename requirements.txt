@@ -1,0 +1,32 @@
+# Core libraries
+python-dotenv
+ipykernel
+numpy<2
+pandas
+fastapi
+uvicorn
+
+# Web scraping / acquisition
+requests
+beautifulsoup4
+
+
+# Semantic chunking
+sentence-transformers
+scikit-learn
+
+# Core LangChain packages
+langchain
+langchain-core
+langchain-community
+rank-bm25
+langchain-openai
+langchain-chroma
+langchain-groq
+langchain-huggingface
+
+# Testing
+pytest
+pytest-asyncio
+pytest-cov
+httpx
