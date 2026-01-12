@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AI Assistant for Occams Advisory - Get answers about our services and complete your onboarding.">
+    <title>Occams Advisory | AI Assistant</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="app-header">
+            <div class="logo">
+                <span class="logo-icon">◈</span>
+                <span class="logo-text">Occams Advisory</span>
+            </div>
+            <div class="header-subtitle">AI Assistant</div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Left Panel: Onboarding Status -->
+            <aside class="onboarding-panel" id="onboardingPanel">
+                <div class="panel-header">
+                    <h2>Your Profile</h2>
+                    <div class="progress-indicator" id="progressIndicator">
+                        <div class="progress-bar" id="progressBar"></div>
+                    </div>
+                </div>
+                
+                <div class="onboarding-form" id="onboardingForm">
+                    <div class="form-group">
+                        <label for="userName">Name</label>
+                        <input type="text" id="userName" placeholder="Enter your name" autocomplete="name">
+                        <span class="field-status" id="nameStatus"></span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="userEmail">Email</label>
+                        <input type="email" id="userEmail" placeholder="you@example.com" autocomplete="email">
+                        <span class="field-status" id="emailStatus"></span>
+                        <span class="error-message" id="emailError"></span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="userPhone">Phone</label>
+                        <input type="tel" id="userPhone" placeholder="(123) 456-7890" autocomplete="tel">
+                        <span class="field-status" id="phoneStatus"></span>
+                        <span class="error-message" id="phoneError"></span>
+                    </div>
+                    
+                    <button class="submit-btn" id="submitOnboarding" disabled>
+                        Complete Onboarding
+                    </button>
+                </div>
+                
+                <div class="onboarding-complete" id="onboardingComplete" style="display: none;">
+                    <div class="success-icon">✓</div>
+                    <h3>Welcome aboard!</h3>
+                    <p id="welcomeMessage">You're all set.</p>
+                </div>
+            </aside>
+
+            <!-- Right Panel: Chat -->
+            <section class="chat-panel">
+                <div class="chat-messages" id="chatMessages">
+                    <!-- Welcome message -->
+                    <div class="message assistant">
+                        <div class="message-avatar">◈</div>
+                        <div class="message-content">
+                            <p>Hello! Welcome to Occams Advisory. 👋</p>
+                            <p>I'm here to help you learn about our services including:</p>
+                            <ul>
+                                <li>Business Services & Growth Incubation</li>
+                                <li>Financial Technology & Payment Solutions</li>
+                                <li>Capital Markets & Investment Banking</li>
+                                <li>Tax Credits & R&D Benefits</li>
+                            </ul>
+                            <p>Feel free to ask me anything, or complete your profile on the left to get personalized assistance!</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="chat-input-container">
+                    <div class="typing-indicator" id="typingIndicator" style="display: none;">
+                        <span></span><span></span><span></span>
+                    </div>
+                    <form class="chat-input-form" id="chatForm">
+                        <input 
+                            type="text" 
+                            id="chatInput" 
+                            placeholder="Ask me about Occams Advisory..."
+                            autocomplete="off"
+                        >
+                        <button type="submit" id="sendBtn">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 2L11 13M22 2L15 22L11 13M11 13L2 9L22 2"/>
+                            </svg>
+                        </button>
+                    </form>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="app-footer">
+            <p>Responses are grounded in official Occams Advisory content</p>
+        </footer>
+    </div>
+
+    <script src="/static/app.js"></script>
+</body>
+</html>
